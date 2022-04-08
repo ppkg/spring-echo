@@ -28,15 +28,6 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-func init() {
-	echo.NotFoundHandler = func(c echo.Context) error {
-		panic(echo.ErrNotFound)
-	}
-	echo.MethodNotAllowedHandler = func(c echo.Context) error {
-		panic(echo.ErrMethodNotAllowed)
-	}
-}
-
 type route struct {
 	handler  web.Handler
 	path     string
